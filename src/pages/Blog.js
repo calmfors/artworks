@@ -61,10 +61,9 @@ const Blog = ({ match, tag }) => {
                     <RichText key={'b' + i} render={item.data.caption} linkResolver={linkResolver} />
                     {/* This is how to get an image into your template */}
                     <img src={item.data.image.url} key={'c' + i} alt={item.data.image.alt} />
-
+                    < br />
                 </div>
             )
-
         )
     } else if (notFound) {
         return <NotFound />

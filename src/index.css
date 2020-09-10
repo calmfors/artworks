@@ -1,6 +1,7 @@
 body {
   margin: 0;
   padding: 0;
+  background-color: darkgray;
 }
 
 html{
@@ -12,5 +13,19 @@ h1{
 }
 
 img{
-  width:400px;
+  width:600px;
+}
+
+a{
+  text-decoration: none;
+  color: black;
+}
+
+.link_img{
+  object-fit: cover;
+width:600px;
+height:100px;
+}
+.blog{
+  margin-bottom: 40px;
 }
