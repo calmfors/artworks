@@ -1,0 +1,16 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+html{
+  margin: 50px;
+}
+
+h1{
+  font-size: 40px;
+}
+
+img{
+  width:400px;
+}
