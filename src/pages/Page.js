@@ -61,7 +61,7 @@ const Page = ({ match }) => {
 
                 {/* This is how to render a Rich Text field into your template as HTML */}
                 {/* <RichText render={doc.data.description} linkResolver={linkResolver} /> */}
-                {doc.results.map((item, i) => <a href={Link.url(item.link, linkResolver)} key={'a' + i}>{item.data.cattitle[0].text}<br /><img src={item.data.category_image.url} className="link_img" /> <br /> </a>)
+                {doc.results.map((item, i) => <a href={Link.url(item.link, linkResolver)} key={i}>{item.data.cattitle[0].text}<br /><img key={"a" + i} src={item.data.category_image.url} className="link_img" /> <br /> </a>)
                 }
 
             </div>

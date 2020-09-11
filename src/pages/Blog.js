@@ -28,9 +28,9 @@ const Blog = ({ match, tag }) => {
             const categories = await client.query(
                 Prismic.Predicates.at("document.type", "category")
             )
-
+            console.log(uid)
             //Match the url category with the list of categories and find correct id
-            const category_id = categories.results.filter(item => item.slugs[0] === uid.split(":").pop())[0].id
+            const category_id = categories.results.filter(item => item.slugs[0] === uid)[0].id
 
             //Get posts with the choosen category, with the id
             const result = await client.query(
@@ -61,7 +61,6 @@ const Blog = ({ match, tag }) => {
                     <RichText key={'b' + i} render={item.data.caption} linkResolver={linkResolver} />
                     {/* This is how to get an image into your template */}
                     <img src={item.data.image.url} key={'c' + i} alt={item.data.image.alt} />
-                    < br />
                 </div>
             )
         )
